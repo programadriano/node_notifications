@@ -2,10 +2,9 @@ const { WebClient } = require('@slack/web-api')
 const slackConfig = require("../config/slackConfig")
 
 
-class SlackClient {
+class SlackService {
 
     async enviaNotificacaoParaSlack(channelId, message) {
-
 
         if (channelId != "" && message != "") {
             const web = new WebClient(slackConfig.token)
@@ -25,4 +24,4 @@ class SlackClient {
     }
 }
 
-module.exports = SlackClient
+module.exports = SlackService

@@ -1,7 +1,7 @@
-# Notificação via Slack
-Projeto desenvolvido para envio de notificações para uma canal do Slack
+# Notificação 
+Projeto desenvolvido para envio de notificações para uma canal do Slack ou grupo do Microsoft Teams
 
-### Configuração de keys
+## Configuração de chaves do Slack
 
 Para enviar mensagem para um canal do Slack, será necessário criar um bot e dar permissão a ele do canal que será notificado. Para esta configuração você poder seguir os passos deste link: [liberação canal slack](https://api.slack.com/apps/A04GY9H4WJ2/oauth), clique em Reinstall to Workspace e selecione o canal que deseja dar permissão. 
 
@@ -20,4 +20,24 @@ curl --location --request POST 'http://localhost:3000/slack' \
     "message":"sua mensagem"
 }'
 ```
+
+## Confirguração de webhook do teams
+
+Para criar um Webhook você pode seguir os passos deste link [WebHook Microsoft Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
+
+
+### Exemplo de envio de mensagem para o Microsoft Teams
+
+Para enviar notificação você pode utilizar o exemplo do curl a seguir:
+
+```
+curl --location --request POST 'http://localhost:3000/teams' \
+--header 'x-token-auth: WebHook do canal do seu teams' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "title":"Titulo da mensagem",
+    "message":"Texto da mensagem"
+}'
+```
+
 

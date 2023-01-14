@@ -8,7 +8,7 @@
     "dev": "nodemon program.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago S Adriano",
   "license": "ISC",
   "dependencies": {
     "@slack/web-api": "^6.8.0",
