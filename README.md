@@ -1,6 +1,9 @@
 # Notificação 
 Projeto desenvolvido para envio de notificações para uma canal do Slack ou grupo do Microsoft Teams
 
+![Fluxo de envio de notificação](./fluxo_de_notificacoes.png)
+
+
 ## Configuração de chaves do Slack
 
 Para enviar mensagem para um canal do Slack, será necessário criar um bot e dar permissão a ele do canal que será notificado. Para esta configuração você poder seguir os passos deste link: [liberação canal slack](https://api.slack.com/apps/A04GY9H4WJ2/oauth), clique em Reinstall to Workspace e selecione o canal que deseja dar permissão. 
